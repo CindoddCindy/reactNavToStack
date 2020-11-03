@@ -19,15 +19,15 @@ export default class Home extends React.Component
         {
           title: 'Title 1',
           caption: 'Caption 1',
-          url: 'https://reactnativecode.000webhostapp.com/images/dahlia-red-blossom-bloom-60597.jpeg',
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMDAYYy6_dlRvoJvb6zl-9xMGJWos1GZitbQ&usqp=CAU',
         }, {
           title: 'Title 2',
           caption: 'Caption 2',
-          url: 'https://reactnativecode.000webhostapp.com/images/flower-impala-lily-floral-plant-65653.jpeg',
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ03zFSgiErEM3_8wTKM0CKlxcTx5W6cynHfA&usqp=CAU',
         }, {
           title: 'Title 3',
           caption: 'Caption 3',
-          url: 'https://reactnativecode.000webhostapp.com/images/flowers-background-butterflies-beautiful-87452.jpeg',
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKJYUlNRtK2OoYOg3NTVgio8QwuVxOLdcImQ&usqp=CAU',
         },
       ],
     };
