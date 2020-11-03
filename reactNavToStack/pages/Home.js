@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, View, Platform,Text ,SafeAreaView,Button} from 'react-native';
+import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image} from 'react-native';
 
 import Slideshow from 'react-native-slideshow';
 
@@ -74,7 +74,32 @@ export default class Home extends React.Component
         
       </View>
     </SafeAreaView>
-             </View>
+
+   < ScrollView horizontal={true}>
+ 
+   
+ 
+    <Image source={require('../image/fullbodymassage.jpeg')} />
+ 
+    <Image source={require('../image/kerokan.jpeg')} />
+ 
+    
+ 
+</ScrollView>
+
+< ScrollView horizontal={true}>
+ 
+   
+ 
+    <Image source={require('../image/reflexologi.jpeg')} />
+ 
+    <Image source={require('../image/totokwajah.jpeg')} />
+ 
+   
+ 
+</ScrollView>
+
+    </View>
           
     
     );
