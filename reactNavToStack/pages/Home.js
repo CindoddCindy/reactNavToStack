@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image} from 'react-native';
+import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image,TouchableOpacity} from 'react-native';
 
 import Slideshow from 'react-native-slideshow';
 
@@ -77,15 +77,29 @@ export default class Home extends React.Component
 
    < ScrollView horizontal={true}>
  
-   
+   <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/fullbodymassage.jpeg')} />
  
-    <Image source={require('../image/fullbodymassage.jpeg')} />
+        </TouchableOpacity>
+        <Text>We are just getting started</Text>
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/kerokan.jpeg')} />
  
-    <Image source={require('../image/kerokan.jpeg')} />
+ 
+        </TouchableOpacity>
+        <Text>We are just getting started</Text>
+      </View>
+ 
  
     
+   
+    
  
-</ScrollView>
+</  ScrollView>
 
 < ScrollView horizontal={true}>
  
@@ -143,6 +157,22 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 500
    
-  }
+  },
+  containers: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    backgroundColor: '#859a9b',
+    borderRadius: 20,
+    padding: 10,
+    marginBottom: 20,
+    shadowColor: '#303838',
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    shadowOpacity: 0.35,
+  },
 
 });
