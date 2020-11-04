@@ -79,19 +79,19 @@ export default class Home extends React.Component
  
    <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/fullbodymassage.jpeg')} />
+        <Image source={require('../image/fullbodymassage.jpeg')} style={{width:100, height: 100}} />
  
         </TouchableOpacity>
-        <Text>We are just getting started</Text>
+        <Text>Full Body Massage</Text>
       </View>
 
       <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/kerokan.jpeg')} />
+        <Image source={require('../image/kerokan.jpeg')} style={{width:100, height: 100}} />
  
  
         </TouchableOpacity>
-        <Text>We are just getting started</Text>
+        <Text>Kerokan</Text>
       </View>
  
  
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: '#859a9b',
+    backgroundColor: '#FFF8E1',
     borderRadius: 20,
     padding: 10,
     marginBottom: 20,
