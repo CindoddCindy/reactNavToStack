@@ -82,7 +82,7 @@ export default class Home extends React.Component
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
  
         </TouchableOpacity>
-        <Text>Full Body Massage</Text>
+        <Text style={styles.TextsStyle}>Full Body Massage</Text>
       </View>
 
       <View style={styles.containers}>
@@ -91,7 +91,7 @@ export default class Home extends React.Component
  
  
         </TouchableOpacity>
-        <Text>Kerokan</Text>
+        <Text style={styles.TextsStyle}>Kerokan</Text>
       </View>
  
  
@@ -105,7 +105,7 @@ export default class Home extends React.Component
         <Image source={require('../image/reflexologi.jpeg')}  style={{width:150, height: 100}} />
  
         </TouchableOpacity>
-        <Text>Reflexologi</Text>
+        <Text style={styles.TextsStyle}>Reflexologi</Text>
       </View>
 
       <View style={styles.containers}>
@@ -114,7 +114,7 @@ export default class Home extends React.Component
  
  
         </TouchableOpacity>
-        <Text>Totok Wajah</Text>
+        <Text style={styles.TextsStyle}>Totok Wajah</Text>
       </View>
    
  
@@ -127,8 +127,8 @@ export default class Home extends React.Component
         <Image source={require('../image/fullbodymassgakerokan.jpeg')}  style={{width:150, height: 100}} />
  
         </TouchableOpacity>
-        <Text>Full Body Massage </Text>
-        <Text>Kerokan</Text>
+        <Text style={styles.TextsStyle}>Full Body Massage </Text>
+        <Text style={styles.TextsStyle}>Kerokan</Text>
       </View>
 
       <View style={styles.containers}>
@@ -137,8 +137,8 @@ export default class Home extends React.Component
  
  
         </TouchableOpacity>
-        <Text>Full Body Massage</Text>
-        <Text>Refelexologi</Text>
+        <Text style={styles.TextsStyle}>Full Body Massage</Text>
+        <Text style={styles.TextsStyle}>Refelexologi</Text>
       </View>
  
 </ScrollView>
@@ -150,8 +150,8 @@ export default class Home extends React.Component
         <Image source={require('../image/fullbodyaccupresore.jpeg')}  style={{width:150, height: 100}} />
  
         </TouchableOpacity>
-        <Text>Full Body Massage </Text>
-        <Text>Accupresore</Text>
+        <Text style={styles.TextsStyle}>Full Body Massage </Text>
+        <Text style={styles.TextsStyle}>Accupresore</Text>
       </View>
 
       <View style={styles.containers}>
@@ -160,8 +160,8 @@ export default class Home extends React.Component
  
  
         </TouchableOpacity>
-        <Text>Full Body Massage</Text>
-        <Text>Scrub</Text>
+        <Text style={styles.TextsStyle}>Full Body Massage</Text>
+        <Text style={styles.TextsStyle}>Scrub</Text>
       </View>
    
  
@@ -212,11 +212,15 @@ const styles = StyleSheet.create({
 
   },
   TextsStyle : {
-    color: '#670099',
+    color: '#6F4FA8',
     textAlign: 'left',
     fontWeight: 'bold',
     fontSize: 14,
-
+    textAlign: 'center',
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ 
   },
   container: {
     flex: 1,
@@ -235,7 +239,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     marginBottom: 20,
-    shadowColor: '#303838',
+    shadowColor: '#670099',
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
     shadowOpacity: 0.35,
