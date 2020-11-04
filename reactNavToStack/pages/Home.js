@@ -65,8 +65,7 @@ export default class Home extends React.Component
         
         {/* Button whith handler function named onPressLearnMore*/}
         <Button
-         
-         title="UserName"
+         title=""
          color="#fff"
          
         />
@@ -96,9 +95,6 @@ export default class Home extends React.Component
       </View>
  
  
-    
-   
-    
  
 </  ScrollView>
 
@@ -145,13 +141,6 @@ export default class Home extends React.Component
         <Text>Refelexologi</Text>
       </View>
  
- 
-    
- 
-    
- 
-   
- 
 </ScrollView>
 
 < ScrollView horizontal={true}>
@@ -179,6 +168,11 @@ export default class Home extends React.Component
 </ScrollView>
 
 
+    
+ 
+    
+ 
+   
 
 
 
@@ -234,6 +228,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding:10
   },
   button: {
     backgroundColor: '#fff',
