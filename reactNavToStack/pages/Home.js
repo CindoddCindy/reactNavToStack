@@ -74,6 +74,7 @@ export default class Home extends React.Component
         
       </View>
     </SafeAreaView>
+    <ScrollView>
 
    < ScrollView horizontal={true}>
  
@@ -119,6 +120,30 @@ export default class Home extends React.Component
         </TouchableOpacity>
         <Text>Totok Wajah</Text>
       </View>
+   
+ 
+</ScrollView>
+
+< ScrollView horizontal={true}>
+ 
+<View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/fullbodymassgakerokan.jpeg')}  style={{width:150, height: 100}} />
+ 
+        </TouchableOpacity>
+        <Text>Full Body Massage </Text>
+        <Text>Kerokan</Text>
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/fullbdyreflexology.jpeg')} style={{width:150, height: 100}} />
+ 
+ 
+        </TouchableOpacity>
+        <Text>Full Body Massage</Text>
+        <Text>Refelexologi</Text>
+      </View>
  
  
     
@@ -127,6 +152,36 @@ export default class Home extends React.Component
  
    
  
+</ScrollView>
+
+< ScrollView horizontal={true}>
+ 
+<View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/fullbodyaccupresore.jpeg')}  style={{width:150, height: 100}} />
+ 
+        </TouchableOpacity>
+        <Text>Full Body Massage </Text>
+        <Text>Accupresore</Text>
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/body_scrub.jpeg')} style={{width:150, height: 100}} />
+ 
+ 
+        </TouchableOpacity>
+        <Text>Full Body Massage</Text>
+        <Text>Scrub</Text>
+      </View>
+   
+ 
+</ScrollView>
+
+
+
+
+
 </ScrollView>
 
     </View>
