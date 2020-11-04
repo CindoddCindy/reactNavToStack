@@ -67,7 +67,7 @@ export default class Home extends React.Component
         <Button
          
          title="UserName"
-         color="#FFF8E1"
+         color="#fff"
          
         />
 
@@ -79,7 +79,7 @@ export default class Home extends React.Component
  
    <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/fullbodymassage.jpeg')} style={{width:100, height: 100}} />
+        <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
  
         </TouchableOpacity>
         <Text>Full Body Massage</Text>
@@ -87,7 +87,7 @@ export default class Home extends React.Component
 
       <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/kerokan.jpeg')} style={{width:100, height: 100}} />
+        <Image source={require('../image/kerokan.jpeg')} style={{width:150, height: 100}} />
  
  
         </TouchableOpacity>
@@ -105,7 +105,7 @@ export default class Home extends React.Component
  
 <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/reflexologi.jpeg')}  style={{width:100, height: 100}} />
+        <Image source={require('../image/reflexologi.jpeg')}  style={{width:150, height: 100}} />
  
         </TouchableOpacity>
         <Text>Reflexologi</Text>
@@ -113,7 +113,7 @@ export default class Home extends React.Component
 
       <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-        <Image source={require('../image/totokwajah.jpeg')} style={{width:100, height: 100}} />
+        <Image source={require('../image/totokwajah.jpeg')} style={{width:150, height: 100}} />
  
  
         </TouchableOpacity>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
-    backgroundColor: '#FFF8E1'
+    backgroundColor: '#fff'
 
   },
   
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: '#FFF8E1',
+    backgroundColor: '#fff',
     borderRadius: 20,
     padding: 10,
     marginBottom: 20,
