@@ -164,11 +164,63 @@ export default class Home extends React.Component
         <Text style={styles.TextsStyle}>Scrub</Text>
       </View>
    
+      
+</ScrollView>
+
+
+
+    < ScrollView horizontal={true}>
+ 
+<View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/acontoh1.jpeg')}  style={{width:150, height: 50}} />
+ 
+        </TouchableOpacity>
+        <Text style={styles.TextsStyleInfo}>Body Scrub Info</Text>
+        
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/acontoh2.jpeg')} style={{width:150, height: 50}} />
+ 
+ 
+        </TouchableOpacity>
+        <Text style={styles.TextsStyleInfo}>Accupresure Info</Text>
+        
+      </View>
+      
  
 </ScrollView>
 
 
-    
+
+
+< ScrollView horizontal={true}>
+ 
+<View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/acontoh3.jpeg')}  style={{width:150, height: 50}} />
+ 
+        </TouchableOpacity>
+        <Text style={styles.TextsStyleInfo}>Body Scrub Info</Text>
+        
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/acontoh4.jpeg')} style={{width:150, height: 50}} />
+ 
+ 
+        </TouchableOpacity>
+        <Text style={styles.TextsStyleInfo}>Accupresure Info</Text>
+        
+      </View>
+      
+ 
+</ScrollView>
+
+
  
     
  
@@ -179,6 +231,7 @@ export default class Home extends React.Component
 </ScrollView>
 
     </View>
+
           
     
     );
@@ -216,6 +269,17 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontWeight: 'bold',
     fontSize: 14,
+    textAlign: 'center',
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ 
+  },
+  TextsStyleInfo : {
+    color: '#2B0D60',
+    textAlign: 'left',
+    fontWeight: 'bold',
+    fontSize: 12,
     textAlign: 'center',
     textShadowColor: '#C9C6CA',
     textShadowOffset: { width: 1, height: 1 },
