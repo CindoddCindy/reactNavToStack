@@ -103,11 +103,27 @@ export default class Home extends React.Component
 
 < ScrollView horizontal={true}>
  
-   
+<View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/reflexologi.jpeg')}  style={{width:100, height: 100}} />
  
-    <Image source={require('../image/reflexologi.jpeg')} />
+        </TouchableOpacity>
+        <Text>Reflexologi</Text>
+      </View>
+
+      <View style={styles.containers}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <Image source={require('../image/totokwajah.jpeg')} style={{width:100, height: 100}} />
  
-    <Image source={require('../image/totokwajah.jpeg')} />
+ 
+        </TouchableOpacity>
+        <Text>Totok Wajah</Text>
+      </View>
+ 
+ 
+    
+ 
+    
  
    
  
