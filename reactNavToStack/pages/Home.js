@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Card} from 'react-native-shadow-cards';
+
 import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image,TouchableOpacity} from 'react-native';
 
 import Slideshow from 'react-native-slideshow';
@@ -76,16 +78,20 @@ export default class Home extends React.Component
     <ScrollView>
 
    < ScrollView horizontal={true}>
+
+   
  
    <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={
               () => this.props.navigation.navigate('Pemesanan')
             }   >
+              
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
- 
+        
         </TouchableOpacity>
         <Text style={styles.TextsStyle}>Full Body Massage</Text>
       </View>
+     
 
       <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
