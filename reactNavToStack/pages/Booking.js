@@ -1,60 +1,158 @@
-//This is an example code for Bottom Navigation//
-import React from 'react';
-//import react in our code.
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet
-} from 'react-native';
-//import all the basic component we have used
+// Scroll to the Top or Bottom of the ListView in React Native
+// https://aboutreact.com/react-native-scroll-up-or-down-the-listview-on-the-click-of-button/
 
-export default class Booking extends React.Component {
-  //Home Screen to show in Home Option
-  render() {
+// import React in our code
+import React, {useState} from 'react';
+
+// import all the components we are going to use
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  FlatList,
+  Text,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+
+const Booking = () => {
+  let listViewRef;
+  const [dataSource, setDataSource] = useState([
+    {id: 1, title: 'Button'},
+    {id: 2, title: 'Card'},
+    {id: 3, title: 'Input'},
+    {id: 4, title: 'Avatar'},
+    {id: 5, title: 'CheckBox'},
+    {id: 6, title: 'Header'},
+    {id: 7, title: 'Icon'},
+    {id: 8, title: 'Lists'},
+    {id: 9, title: 'Rating'},
+    {id: 10, title: 'Pricing'},
+    {id: 11, title: 'Avatar'},
+    {id: 12, title: 'CheckBox'},
+    {id: 13, title: 'Header'},
+    {id: 14, title: 'Icon'},
+    {id: 15, title: 'Lists'},
+    {id: 16, title: 'Rating'},
+    {id: 17, title: 'Pricing'},
+  ]);
+
+  const ItemView = ({item}) => {
     return (
+      // Flat List Item
+      <Text
+        style={styles.itemStyle}
+        onPress={() => getItem(item)}>
+        {item.id}
+        {'.'}
+        {item.title.toUpperCase()}
+      </Text>
+    );
+  };
+
+  const ItemSeparatorView = () => {
+    return (
+      // Flat List Item Separator
       <View
         style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}>
-        <Text
-          style={{
-            marginTop: 50,
-            fontSize: 25
-          }}>Home!</Text>
-        <View
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Settings')
-            }>
-            <Text>Go to settng Tab</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Details')
-            }>
-            <Text>Open Details Screen</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+          height: 0.5,
+          width: '100%',
+          backgroundColor: '#C8C8C8',
+        }}
+      />
     );
-  }
-}
+  };
+
+  const getItem = (item) => {
+    // Function for click on an item
+    alert('Id : ' + item.id + ' Title : ' + item.title);
+  };
+
+  const upButtonHandler = () => {
+    //OnCLick of Up button we scrolled the list to top
+    listViewRef.scrollToOffset({
+      offset: 0,
+      animated: true
+    });
+  };
+
+  const downButtonHandler = () => {
+    //OnCLick of down button we scrolled the list to bottom
+    listViewRef.scrollToEnd({animated: true});
+  };
+
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <FlatList
+        data={dataSource}
+        keyExtractor={(item, index) => index.toString()}
+        ItemSeparatorComponent={ItemSeparatorView}
+        renderItem={ItemView}
+        ref={(ref) => {
+          listViewRef = ref;
+        }}
+      />
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={downButtonHandler}
+        style={styles.downButtonStyle}>
+        <Image
+          source={{
+            uri:
+              'https://raw.githubusercontent.com/AboutReact/sampleresource/master/arrow_down.png',
+          }}
+          style={styles.downButtonImageStyle}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={upButtonHandler}
+        style={styles.upButtonStyle}>
+        <Image
+          source={{
+            uri:
+              'https://raw.githubusercontent.com/AboutReact/sampleresource/master/arrow_up.png',
+          }}
+          style={styles.upButtonImageStyle}
+        />
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
+};
+
 const styles = StyleSheet.create({
-  button: {
+  itemStyle: {
+    padding: 30,
+    fontSize: 20,
+  },
+  upButtonStyle: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
     alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    width: 300,
-    marginTop: 16,
+    justifyContent: 'center',
+    right: 30,
+    bottom: 70,
+  },
+  upButtonImageStyle: {
+    resizeMode: 'contain',
+    width: 30,
+    height: 30,
+  },
+  downButtonStyle: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 30,
+    top: 70,
+  },
+  downButtonImageStyle: {
+    resizeMode: 'contain',
+    width: 30,
+    height: 30,
   },
 });
+
+export default Booking;

@@ -1,60 +1,25 @@
-//This is an example code for Bottom Navigation//
-import React from 'react';
-//import react in our code.
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet
-} from 'react-native';
-//import all the basic component we have used
+//Example of React Native Text
+//https://aboutreact.com/react-native-text/
 
-export default class Inbox extends React.Component {
-  //Home Screen to show in Home Option
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}>
-        <Text
-          style={{
-            marginTop: 50,
-            fontSize: 25
-          }}>Home!</Text>
-        <View
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Settings')
-            }>
-            <Text>Go to settng Tab</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Details')
-            }>
-            <Text>Open Details Screen</Text>
-          </TouchableOpacity>
-        </View>
+//import React in our code
+import React from 'react';
+
+//import all the components we are going to use
+import {View, Text, SafeAreaView} from 'react-native';
+
+const Inbox = () => {
+  return (
+    // enclose all components in this View tag
+    <SafeAreaView>
+      <View>
+        {/* View is used here to wrap all component in one */}
+        <Text>All the very best</Text> 
+        {/* Text is used same as a tag in HTML */} 
+        <Text>This is your first App.</Text>
+        <Text>Enjoy react native coding.</Text>
       </View>
-    );
-  }
-}
-const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    width: 300,
-    marginTop: 16,
-  },
-});
+    </SafeAreaView>
+  );
+};
+
+export default Inbox;
