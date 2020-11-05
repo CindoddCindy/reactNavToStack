@@ -5,7 +5,9 @@
 import React from 'react';
 
 //import all the components we are going to use
-import {View, Text, SafeAreaView} from 'react-native';
+import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+
+import {Card} from 'react-native-shadow-cards';
 
 const Inbox = () => {
   return (
@@ -23,5 +25,35 @@ const Inbox = () => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    alignItems: 'center',
+    
+    padding: 10,
+    width: 300,
+    marginTop: 16,
+  },
+  containers: {
+    flex: 1,
+   
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding:10
+  },
+  TextsStyle : {
+    color: '#6F4FA8',
+    textAlign: 'left',
+    fontWeight: 'bold',
+    fontSize: 14,
+    padding:5,
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ 
+  },
+  
+
+});
 
 export default Inbox;
