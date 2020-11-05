@@ -90,7 +90,7 @@ export default class Home extends React.Component
       <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
         <Image source={require('../image/kerokan.jpeg')} style={{width:150, height: 100}} />
- 
+         
  
         </TouchableOpacity>
         <Text style={styles.TextsStyle}>Kerokan</Text>

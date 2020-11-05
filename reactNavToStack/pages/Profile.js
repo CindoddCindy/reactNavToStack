@@ -1,5 +1,6 @@
 //This is an example code for Bottom Navigation//
 import React from 'react';
+import {Card} from 'react-native-shadow-cards';
 //import react in our code.
 import {
   Text,
@@ -32,11 +33,13 @@ export default class Profile extends React.Component {
      <Image source={require('../image/person.jpeg')} style={{width:250, height: 200}} />
 
      </TouchableOpacity>
+     <Card style={{padding: 10, margin: 10}}>
      <Text style={styles.TextsStyle}>Username</Text>
      <Text style={styles.TextsStyle}>Email</Text>
      <Text style={styles.TextsStyle}>Phone</Text>
      <Text style={styles.TextsStyle}>Address</Text>
      <Text style={styles.TextsStyle}>Location</Text>
+     </Card>
         </View>
 
    
@@ -72,5 +75,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1
  
-  }
+  },
+  
+
 });
