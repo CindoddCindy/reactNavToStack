@@ -26,40 +26,78 @@ export default class Profile extends React.Component {
 
 < ScrollView horizontal={true}>
 
+<Card style={{padding: 10, margin: 10}}>
 <View style={styles.containers}>
+     <Text style={{ color: '#6F4FA8',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 16,
+    padding:1,
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ }}>My Profile</Text>
+     
+
+
      <TouchableOpacity style={styles.button} onPress={
            () => this.props.navigation.navigate('Pemesanan')
          }   >
-     <Image source={require('../image/person.jpeg')} style={{width:250, height: 200}} />
+           
+          
+     <Image source={require('../image/person.jpeg')} style={{width:250, height: 250}} />
+    
 
      </TouchableOpacity>
-     <Card style={{padding: 10, margin: 10}}>
+
+     
+     <Card style={{padding: 5, margin: 5}}>
      <Text style={styles.TextsStyle}>Username</Text>
+     </Card>
+
+     <Card style={{padding: 5, margin: 5}}>
      <Text style={styles.TextsStyle}>Email</Text>
+     </Card>
+
+     <Card style={{padding: 5, margin: 5}}>
      <Text style={styles.TextsStyle}>Phone</Text>
+     </Card>
+
+     <Card style={{padding: 5, margin: 5}}>
      <Text style={styles.TextsStyle}>Address</Text>
+     </Card>
+
+     <Card style={{padding: 5, margin: 5}}>
      <Text style={styles.TextsStyle}>Location</Text>
      </Card>
+     <Card style={{padding: 5, margin: 5}}>
+     <Text style={styles.TextsStyle}>Edit</Text>
+     </Card>
+     <Card style={{padding: 5, margin: 5}}>
+     <Text style={styles.TextsStyle}>Logout</Text>
+     </Card>
         </View>
+        </Card>
 
    
 </  ScrollView>
 </ScrollView>
       </View>
+      
     );
   }
 }
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: '#DDDDDD',
+    
     padding: 10,
     width: 300,
     marginTop: 16,
   },
   containers: {
     flex: 1,
-    backgroundColor: '#fff',
+   
     alignItems: 'center',
     justifyContent: 'center',
     padding:10
@@ -70,7 +108,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 14,
     padding:5,
-    textAlign: 'center',
     textShadowColor: '#C9C6CA',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1
