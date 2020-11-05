@@ -78,7 +78,9 @@ export default class Home extends React.Component
    < ScrollView horizontal={true}>
  
    <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}   >
+        <TouchableOpacity style={styles.button} onPress={
+              () => this.props.navigation.navigate('Pemesanan')
+            }   >
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
  
         </TouchableOpacity>

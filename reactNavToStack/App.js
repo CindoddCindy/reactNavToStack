@@ -20,12 +20,16 @@ import Home from './pages/Home';
 import Booking from './pages/Booking';
 import Inbox from './pages/Inbox';
 import Profile from './pages/Profile';
+import Login from './pages/Login';
+import Regis from './pages/Regis';
+import Pemesanan from './pages/Pemesanan';
 
 
 const HomeStack = createStackNavigator(
   {
     //Defination of Navigaton from home screen
-    Home: { screen: Home }
+    Home: { screen: Home },
+    PemesananCustomer : { screen : Pemesanan},
     //Details: { screen: DetailsScreen },
   },
   {
@@ -44,7 +48,7 @@ const BookingStack = createStackNavigator(
   {
     //Defination of Navigaton from setting screen
     Booking: { screen: Booking }
-   // Details: { screen: DetailsScreen },
+    //Detail: { screen: DetailsScreen },
     //Profile: { screen: ProfileScreen },
   },
   {
@@ -103,7 +107,7 @@ const App = createBottomTabNavigator(
     Home: { screen: Home },
     Booking: {screen: Booking},
     Inbox: { screen: Inbox },
-    Profile: {screen : Profile}
+    Profile: {screen : Profile},
 
   },
   {

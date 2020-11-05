@@ -5,7 +5,9 @@ import {
   Text,
   View,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  ScrollView,
+  Image
 } from 'react-native';
 //import all the basic component we have used
 
@@ -19,32 +21,27 @@ export default class Profile extends React.Component {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-        <Text
-          style={{
-            marginTop: 50,
-            fontSize: 25
-          }}>Home!</Text>
-        <View
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Settings')
-            }>
-            <Text>Go to settng Tab</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Details')
-            }>
-            <Text>Open Details Screen</Text>
-          </TouchableOpacity>
+              <ScrollView>
+
+< ScrollView horizontal={true}>
+
+<View style={styles.containers}>
+     <TouchableOpacity style={styles.button} onPress={
+           () => this.props.navigation.navigate('Pemesanan')
+         }   >
+     <Image source={require('../image/person.jpeg')} style={{width:250, height: 200}} />
+
+     </TouchableOpacity>
+     <Text style={styles.TextsStyle}>Username</Text>
+     <Text style={styles.TextsStyle}>Email</Text>
+     <Text style={styles.TextsStyle}>Phone</Text>
+     <Text style={styles.TextsStyle}>Address</Text>
+     <Text style={styles.TextsStyle}>Location</Text>
         </View>
+
+   
+</  ScrollView>
+</ScrollView>
       </View>
     );
   }
@@ -57,4 +54,23 @@ const styles = StyleSheet.create({
     width: 300,
     marginTop: 16,
   },
+  containers: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding:10
+  },
+  TextsStyle : {
+    color: '#6F4FA8',
+    textAlign: 'left',
+    fontWeight: 'bold',
+    fontSize: 14,
+    padding:5,
+    textAlign: 'center',
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ 
+  }
 });
