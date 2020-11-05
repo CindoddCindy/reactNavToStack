@@ -1,157 +1,115 @@
-// Scroll to the Top or Bottom of the ListView in React Native
-// https://aboutreact.com/react-native-scroll-up-or-down-the-listview-on-the-click-of-button/
+//React Native FlatList
+//https://aboutreact.com/react-native-flatlist/
 
-// import React in our code
+//import React in our code
 import React, {useState} from 'react';
 
-// import all the components we are going to use
+import {Card} from 'react-native-shadow-cards';
+
+//import all the components we are going to use
 import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  Image,
+    FlatList,
+    View,
+    Text,
+    SafeAreaView,
+    StyleSheet
 } from 'react-native';
 
+const dummyArray = [
+  {id: '1', value: 'My Order'},
+  {id: '2', value: ' My Order'},
+  {id: '3', value: 'My Order'},
+  {id: '4', value: 'My Order'},
+  {id: '5', value: 'My Order'},
+  {id: '6', value: 'My Order'},
+  {id: '7', value: 'My Order'},
+  {id: '8', value: 'My Order'},
+  {id: '9', value: 'My Order'},
+  {id: '10', value: 'My Order'},
+  {id: '11', value: 'My Order'},
+  {id: '12', value: 'My Order'},
+  {id: '13', value: 'My Order'},
+  {id: '14', value: 'My Order'},
+  {id: '15', value: 'My Order'},
+  {id: '16', value: 'My Order'},
+  {id: '17', value: 'My Order'},
+  {id: '18', value: 'My Order'},
+  {id: '19', value: 'My Order'},
+  {id: '20', value: 'My Order'},
+  {id: '21', value: 'My Order'},
+  {id: '22', value: 'My Order'},
+  {id: '23', value: 'My Order'},
+  {id: '24', value: 'My Order'},
+  {id: '25', value: 'My Order'},
+  {id: '26', value: 'My Order'},
+];
+
 const Booking = () => {
-  let listViewRef;
-  const [dataSource, setDataSource] = useState([
-    {id: 1, title: 'Button'},
-    {id: 2, title: 'Card'},
-    {id: 3, title: 'Input'},
-    {id: 4, title: 'Avatar'},
-    {id: 5, title: 'CheckBox'},
-    {id: 6, title: 'Header'},
-    {id: 7, title: 'Icon'},
-    {id: 8, title: 'Lists'},
-    {id: 9, title: 'Rating'},
-    {id: 10, title: 'Pricing'},
-    {id: 11, title: 'Avatar'},
-    {id: 12, title: 'CheckBox'},
-    {id: 13, title: 'Header'},
-    {id: 14, title: 'Icon'},
-    {id: 15, title: 'Lists'},
-    {id: 16, title: 'Rating'},
-    {id: 17, title: 'Pricing'},
-  ]);
+  const [listItems, setListItems] = useState(dummyArray);
 
   const ItemView = ({item}) => {
     return (
-      // Flat List Item
-      <Text
-        style={styles.itemStyle}
-        onPress={() => getItem(item)}>
-        {item.id}
-        {'.'}
-        {item.title.toUpperCase()}
-      </Text>
+      // FlatList Item
+      <Card style={{padding: 10, margin: 10}}>
+      <View>
+        <Text>Date : 02 -10- 2020</Text>
+        <Text
+          style={styles.item}
+          onPress={() => getItem(item)}>
+          {item.value}
+        </Text>
+      </View>
+      </Card>
     );
   };
 
   const ItemSeparatorView = () => {
     return (
-      // Flat List Item Separator
+      // FlatList Item Separator
       <View
-        style={{
-          height: 0.5,
-          width: '100%',
-          backgroundColor: '#C8C8C8',
-        }}
+          style={{
+              height: 0.5,
+              width: '100%',
+              backgroundColor: '#C8C8C8'
+          }}
       />
     );
   };
 
   const getItem = (item) => {
-    // Function for click on an item
-    alert('Id : ' + item.id + ' Title : ' + item.title);
-  };
-
-  const upButtonHandler = () => {
-    //OnCLick of Up button we scrolled the list to top
-    listViewRef.scrollToOffset({
-      offset: 0,
-      animated: true
-    });
-  };
-
-  const downButtonHandler = () => {
-    //OnCLick of down button we scrolled the list to bottom
-    listViewRef.scrollToEnd({animated: true});
+    //Function for click on an item
+    alert('Id: ' + item.id + ' Value: ' + item.value);
   };
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <FlatList
-        data={dataSource}
-        keyExtractor={(item, index) => index.toString()}
-        ItemSeparatorComponent={ItemSeparatorView}
-        renderItem={ItemView}
-        ref={(ref) => {
-          listViewRef = ref;
-        }}
-      />
-      <TouchableOpacity
-        activeOpacity={0.5}
-        onPress={downButtonHandler}
-        style={styles.downButtonStyle}>
-        <Image
-          source={{
-            uri:
-              'https://raw.githubusercontent.com/AboutReact/sampleresource/master/arrow_down.png',
-          }}
-          style={styles.downButtonImageStyle}
+      <View style={styles.container}>
+        <FlatList
+          data={listItems}
+          //data defined in constructor
+          ItemSeparatorComponent={ItemSeparatorView}
+          //Item Separator View
+          renderItem={ItemView}
+          keyExtractor={(item, index) => index.toString()}
         />
-      </TouchableOpacity>
-      <TouchableOpacity
-        activeOpacity={0.5}
-        onPress={upButtonHandler}
-        style={styles.upButtonStyle}>
-        <Image
-          source={{
-            uri:
-              'https://raw.githubusercontent.com/AboutReact/sampleresource/master/arrow_up.png',
-          }}
-          style={styles.upButtonImageStyle}
-        />
-      </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  itemStyle: {
-    padding: 30,
-    fontSize: 20,
-  },
-  upButtonStyle: {
-    position: 'absolute',
-    width: 50,
-    height: 50,
-    alignItems: 'center',
+  container: {
     justifyContent: 'center',
-    right: 30,
-    bottom: 70,
+    flex: 1,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 10,
+    marginTop: 30,
   },
-  upButtonImageStyle: {
-    resizeMode: 'contain',
-    width: 30,
-    height: 30,
-  },
-  downButtonStyle: {
-    position: 'absolute',
-    width: 50,
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    right: 30,
-    top: 70,
-  },
-  downButtonImageStyle: {
-    resizeMode: 'contain',
-    width: 30,
-    height: 30,
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
 });
 
