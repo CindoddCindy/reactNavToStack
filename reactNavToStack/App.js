@@ -134,6 +134,15 @@ const App = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: '#670099',
       inactiveTintColor: 'gray',
+      color: '#6F4FA8',
+      textAlign: 'left',
+      fontWeight: 'bold',
+      fontSize: 18,
+      padding:5,
+      textShadowColor: '#C9C6CA',
+      textShadowOffset: { width: 1, height: 1 },
+      textShadowRadius: 1
+   
     },
   }
 );

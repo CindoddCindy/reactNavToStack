@@ -13,11 +13,13 @@ const Inbox = () => {
     <SafeAreaView>
       <View>
         {/* View is used here to wrap all component in one */}
-        <Text>All the very best</Text> 
-        {/* Text is used same as a tag in HTML */} 
-        <Text>This is your first App.</Text>
-        <Text>Enjoy react native coding.</Text>
-      </View>
+       
+        <Card style={{padding: 10, margin: 10}}>
+        <Text style={styles.TextsStyle}>Date : 03/10/2020 </Text>
+     <Text style={styles.TextsStyle}>You hvae one message </Text>
+     </Card>
+     
+             </View>
     </SafeAreaView>
   );
 };
