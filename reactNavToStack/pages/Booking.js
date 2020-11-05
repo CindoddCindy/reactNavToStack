@@ -12,7 +12,8 @@ import {
     View,
     Text,
     SafeAreaView,
-    StyleSheet
+    StyleSheet,
+    Image
 } from 'react-native';
 
 const dummyArray = [
@@ -53,7 +54,7 @@ const Booking = () => {
       <Card style={{padding: 10, margin: 10}}>
       <View>
         <Text>Date : 02 -10- 2020</Text>
-        <Text
+             <Text
           style={styles.item}
           onPress={() => getItem(item)}>
           {item.value}
@@ -110,6 +111,15 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     height: 44,
+    color: '#6F4FA8',
+    textAlign: 'left',
+    fontWeight: 'bold',
+    fontSize: 14,
+    padding:5,
+    textShadowColor: '#C9C6CA',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
+ 
   },
 });
 
