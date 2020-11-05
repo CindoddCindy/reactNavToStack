@@ -83,7 +83,7 @@ export default class Home extends React.Component
  
    <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress={
-              () => this.props.navigation.navigate('Pemesanan')
+              () => this.props.navigation.navigate('Pemesanan')//gabisa ke halaman lain
             }   >
               
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
