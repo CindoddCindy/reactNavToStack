@@ -18,7 +18,7 @@ const Inbox = () => {
        
         <Card style={{padding: 10, margin: 10}}>
         <Text style={styles.TextsStyle}>Date : 03/10/2020 </Text>
-     <Text style={styles.TextsStyle}>You hvae one message </Text>
+     <Text style={styles.TextsStyle}>You have one message </Text>
      </Card>
      
              </View>
