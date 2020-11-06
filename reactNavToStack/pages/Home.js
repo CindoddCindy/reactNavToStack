@@ -7,8 +7,11 @@ import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image,T
 import Slideshow from 'react-native-slideshow';
 
 
+
 export default class Home extends React.Component
 {
+
+
   
 
   constructor() {
@@ -32,7 +35,7 @@ export default class Home extends React.Component
 
   }
 
-  componentWillMount() {
+  componentWilldMount() {
     this.setState({
       interval: setInterval(() => {
         this.setState({
@@ -52,12 +55,13 @@ export default class Home extends React.Component
     return (
 
       <View style={styles.MainContainer}>
-        
-        <Slideshow
+       
+       <Slideshow
           dataSource={this.state.dataSource}
           position={this.state.position}
           onPositionChanged={position => this.setState({ position })}
            />
+           
              
 
             
@@ -82,9 +86,7 @@ export default class Home extends React.Component
    
  
    <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress={
-              () => this.props.navigation.navigate('Pemesanan')//gabisa ke halaman lain
-            }   >
+        <TouchableOpacity style={styles.button} onPress={ () => this.props.navigation.navigate('Pemesanan')}>
               
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
         
@@ -94,7 +96,7 @@ export default class Home extends React.Component
      
 
       <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
+        <TouchableOpacity style={styles.button}  onPress={ () => this.props.navigation.navigate('Login')}>
         <Image source={require('../image/kerokan.jpeg')} style={{width:150, height: 100}} />
          
  

@@ -30,6 +30,7 @@ const HomeStack = createStackNavigator(
     //Defination of Navigaton from home screen
     Home: { screen: Home },
     PemesananCustomer : { screen : Pemesanan},
+    LoginUser : {screen: Login},
     //Details: { screen: DetailsScreen },
   },
   {
