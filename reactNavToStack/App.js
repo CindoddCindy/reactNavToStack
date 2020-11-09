@@ -29,8 +29,9 @@ const HomeStack = createStackNavigator(
   {
     //Defination of Navigaton from home screen
     Home: { screen: Home },
-    PemesananCustomer : { screen : Pemesanan},
-    LoginUser : {screen: Login},
+    GotoPemesanan : { screen : Pemesanan},
+    GoToRegis : {screen : Regis},
+    
     //Details: { screen: DetailsScreen },
   },
   {
