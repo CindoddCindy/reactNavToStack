@@ -35,7 +35,12 @@ export default class Home extends React.Component
 
   }
 
-  componentDidMount() {
+  onPress = () => {
+   // this.setState({text: 'Bye-bye'});
+    this.props.navigation.navigate('GotoPemesanan')
+  }
+
+  componentWillMount() {
     this.setState({
       interval: setInterval(() => {
         this.setState({
@@ -45,7 +50,7 @@ export default class Home extends React.Component
     });
   }
 
-  componentDidlUnmount() {
+  componentWillUnmount() {
     clearInterval(this.state.interval);
   }
   
@@ -87,7 +92,7 @@ export default class Home extends React.Component
    
  
    <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress={ () => this.props.navigation.navigate(' GotoPemesanan')}>
+        <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
               
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
         
