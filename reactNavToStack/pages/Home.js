@@ -33,12 +33,20 @@ export default class Home extends React.Component
       ],
     };
 
+    this.onPressBtn= this.onPressBtn.bind(this);
+
+    this.redirect = this.redirect.bind(this);
+
   }
 
-  onPress = () => {
+  onPressBtn = () => {
    // this.setState({text: 'Bye-bye'});
     this.props.navigation.navigate('GotoPemesanan')
   }
+
+  redirect(){
+    this.props.navigation.navigate('GotoPemesanan');
+   }
 
   componentWillMount() {
     this.setState({
@@ -92,7 +100,7 @@ export default class Home extends React.Component
    
  
    <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
+        <TouchableOpacity style={styles.button} onPress= {this.redirect}>
               
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
         
