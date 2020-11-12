@@ -6,13 +6,8 @@ import { StyleSheet, View, Platform,Text ,SafeAreaView,Button,ScrollView,Image,T
 
 import Slideshow from 'react-native-slideshow';
 
-
-
 export default class Home extends React.Component
 {
-
-
-  
 
   constructor() {
 
@@ -33,22 +28,17 @@ export default class Home extends React.Component
       ],
     };
 
-    this.onPressBtn= this.onPressBtn.bind(this);
-
+   
     this.redirect = this.redirect.bind(this);
 
   }
 
-  onPressBtn = () => {
-   // this.setState({text: 'Bye-bye'});
-    this.props.navigation.navigate('GotoPemesanan')
-  }
-
+  
   redirect(){
     this.props.navigation.navigate('GotoPemesanan');
    }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({
       interval: setInterval(() => {
         this.setState({
@@ -62,9 +52,7 @@ export default class Home extends React.Component
     clearInterval(this.state.interval);
   }
   
-    
-
-  render() {
+   render() {
 
     return (
 
@@ -76,11 +64,8 @@ export default class Home extends React.Component
           onPositionChanged={position => this.setState({ position })}
            />
            
-             
-
-            
-             <SafeAreaView style={{ flex: 1 }}>
-      {/* enclose all components in this View tag */}
+    <SafeAreaView style={{ flex: 1 }}>
+ {/* enclose all components in this View tag */}
       <View style={styles.container}>
         
         {/* Button whith handler function named onPressLearnMore*/}
@@ -89,16 +74,12 @@ export default class Home extends React.Component
          color="#fff"
          
         />
-
-        
-      </View>
+  </View>
     </SafeAreaView>
     <ScrollView>
 
    < ScrollView horizontal={true}>
 
-   
- 
    <View style={styles.containers}>
         <TouchableOpacity style={styles.button} onPress= {this.redirect}>
               
