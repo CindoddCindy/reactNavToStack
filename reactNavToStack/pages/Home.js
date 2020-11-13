@@ -29,7 +29,7 @@ export default class Home extends React.Component
     };
 
    
-    this.redirect = this.redirect.bind(this);
+    //this.redirect = this.redirect.bind(this);
 
   }
 
@@ -48,7 +48,7 @@ export default class Home extends React.Component
     });
   }
 
-  componentWillUnmount() {
+  componentDidUnmount() {
     clearInterval(this.state.interval);
   }
   
@@ -81,7 +81,9 @@ export default class Home extends React.Component
    < ScrollView horizontal={true}>
 
    <View style={styles.containers}>
-        <TouchableOpacity style={styles.button} onPress= {this.redirect}>
+        <TouchableOpacity style={styles.button}   onPress= {()=>this.redirect()}>
+
+          {/*onPress= {this.redirect}*/}
               
         <Image source={require('../image/fullbodymassage.jpeg')} style={{width:150, height: 100}} />
         
